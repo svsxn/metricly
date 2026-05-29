@@ -12,7 +12,7 @@ export default function Header() {
       <div className="flex flex-col justify-end">
         <h1 className="text-4xl font-semibold">Overview</h1>
         <p className="text-sm text-muted-foreground">
-          Welcome back, Sebastin. Here&apos;s what&apos;s happening with your
+          Welcome back, Sebastian. Here&apos;s what&apos;s happening with your
           business.
         </p>
       </div>
@@ -25,10 +25,10 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <Button>
+          <Button className="px-3 py-4 rounded-md text-foreground">
             <RefreshCwIcon />
           </Button>
-          <Button>
+          <Button className="px-3 py-4 rounded-md text-foreground">
             Export <DownloadIcon />
           </Button>
         </div>
