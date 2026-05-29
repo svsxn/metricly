@@ -15,7 +15,7 @@ const colorMap: Record<number, { bg: string; icon: string }> = {
 export default function Card({ index, Icon, title, amount }: Props) {
   const styles = colorMap[index + 1];
   return (
-    <div className="flex flex-col col-span-1 gap-3 bg-card rounded-md px-4 py-3 border">
+    <div className="flex flex-col col-span-1 gap-3 bg-card rounded-md p-4 border">
       <div className="flex items-center gap-3">
         <div className={`${styles.bg} p-1.5 rounded-md`}>
           <Icon color={styles.icon} />
