@@ -1,5 +1,10 @@
 import { Card } from "@/types/general";
-import { CoinsIcon } from "lucide-react";
+import {
+  ActivityIcon,
+  CoinsIcon,
+  TrendingUpIcon,
+  UsersIcon,
+} from "lucide-react";
 
 export const CARDS: Card[] = [
   {
@@ -8,17 +13,17 @@ export const CARDS: Card[] = [
     amount: "$24,820",
   },
   {
-    Icon: CoinsIcon,
+    Icon: UsersIcon,
     title: "Active Users",
     amount: "8,492",
   },
   {
-    Icon: CoinsIcon,
+    Icon: TrendingUpIcon,
     title: "Conversion Rate",
     amount: "6.84%",
   },
   {
-    Icon: CoinsIcon,
+    Icon: ActivityIcon,
     title: "Churn Rate",
     amount: "2.3%",
   },
