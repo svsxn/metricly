@@ -25,10 +25,10 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <Button className="px-3 py-4 rounded-md text-foreground">
+          <Button className="px-3 py-4 rounded-md">
             <RefreshCwIcon />
           </Button>
-          <Button className="px-3 py-4 rounded-md text-foreground">
+          <Button className="px-3 py-4 rounded-md">
             Export <DownloadIcon />
           </Button>
         </div>
