@@ -9,8 +9,7 @@ const colorMap: Record<number, { bg: string; icon: string }> = {
   1: { bg: "bg-chart-1/20", icon: "var(--chart-1)" },
   2: { bg: "bg-chart-2/20", icon: "var(--chart-2)" },
   3: { bg: "bg-chart-3/20", icon: "var(--chart-3)" },
-  4: { bg: "bg-chart-4/20", icon: "var(--chart-4)" },
-  5: { bg: "bg-chart-5/20", icon: "var(--chart-5)" },
+  4: { bg: "bg-chart-5/20", icon: "var(--chart-5)" },
 };
 
 export default function Card({ index, Icon, title, amount }: Props) {
