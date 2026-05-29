@@ -5,3 +5,9 @@ type Card = {
   title: string;
   amount: string;
 };
+
+type NavItem = {
+  Icon: LucideIcon;
+  name: string;
+  href: string;
+};
