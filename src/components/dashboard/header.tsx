@@ -1,9 +1,4 @@
-import {
-  BellIcon,
-  DownloadIcon,
-  RefreshCwIcon,
-  SearchIcon,
-} from "lucide-react";
+import { BellIcon, DownloadIcon, RotateCwIcon, SearchIcon } from "lucide-react";
 import { Button } from "../ui/button";
 
 export default function Header() {
@@ -26,7 +21,7 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-4">
           <Button className="px-3 py-4 rounded-md">
-            <RefreshCwIcon />
+            <RotateCwIcon />
           </Button>
           <Button className="px-3 py-4 rounded-md">
             Export <DownloadIcon />
