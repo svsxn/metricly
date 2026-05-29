@@ -16,6 +16,11 @@ export default function Home() {
             amount={card.amount}
           />
         ))}
+        <div className="h-64 col-span-2 bg-card border rounded-sm"></div>
+        <div className="h-64 col-span-2 bg-card border rounded-sm"></div>
+        <div className="h-64 col-span-2 bg-card border rounded-sm"></div>
+        <div className="h-64 col-span-2 bg-card border rounded-sm"></div>
+        <div className="h-64 col-span-4 bg-card border rounded-sm"></div>
       </div>
     </div>
   );
