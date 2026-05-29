@@ -1,12 +1,25 @@
 import type { Card } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
 
-export default function Card({ Icon, title, amount }: Card) {
+type Props = Card & {
+  index: number;
+};
+
+const colorMap: Record<number, { bg: string; icon: string }> = {
+  1: { bg: "bg-chart-1/20", icon: "var(--chart-1)" },
+  2: { bg: "bg-chart-2/20", icon: "var(--chart-2)" },
+  3: { bg: "bg-chart-3/20", icon: "var(--chart-3)" },
+  4: { bg: "bg-chart-4/20", icon: "var(--chart-4)" },
+  5: { bg: "bg-chart-5/20", icon: "var(--chart-5)" },
+};
+
+export default function Card({ index, Icon, title, amount }: Props) {
+  const styles = colorMap[index + 1];
   return (
     <div className="flex flex-col gap-3 bg-card rounded-md px-4 py-3 border">
       <div className="flex items-center gap-3">
-        <div className="bg-primary/20 p-1.5 rounded-md">
-          <Icon color="var(--primary)" />
+        <div className={`${styles.bg} p-1.5 rounded-md`}>
+          <Icon color={styles.icon} />
         </div>
         <h2>{title}</h2>
       </div>

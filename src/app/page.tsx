@@ -7,9 +7,10 @@ export default function Home() {
     <div className="p-6">
       <Header />
       <div className="grid grid-cols-4 gap-4 mt-8">
-        {CARDS.map((card) => (
+        {CARDS.map((card, index) => (
           <Card
             key={card.title}
+            index={index}
             Icon={card.Icon}
             title={card.title}
             amount={card.amount}
