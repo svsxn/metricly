@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="p-6">
       <Header />
-      <div className="grid grid-cols-4 gap-4 mt-8">
+      <div className="grid grid-cols-4 gap-4 mt-7">
         {CARDS.map((card, index) => (
           <Card
             key={card.title}
