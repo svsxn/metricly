@@ -15,9 +15,9 @@ export default function Sidebar() {
             />
           </div>
         </div>
-        <div className="bg-card px-0.5 py-1 border hover:cursor-pointer rounded-md">
+        {/*<div className="bg-card px-0.5 py-1 border hover:cursor-pointer rounded-md">
           <ChevronsLeftIcon size={20} />
-        </div>
+        </div>*/}
       </div>
       <Nav />
     </aside>
