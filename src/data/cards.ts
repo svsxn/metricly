@@ -1,14 +1,14 @@
 import { Card } from "@/types/general";
 import {
   ActivityIcon,
-  CoinsIcon,
+  CircleDollarSignIcon,
   TrendingUpIcon,
   UsersIcon,
 } from "lucide-react";
 
 export const CARDS: Card[] = [
   {
-    Icon: CoinsIcon,
+    Icon: CircleDollarSignIcon,
     title: "Monthly Revenue",
     amount: "$24,820",
   },
