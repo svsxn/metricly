@@ -7,6 +7,14 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "../ui/chart";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
 
 type Props = {
   title: string;
@@ -34,7 +42,19 @@ export default function ChartCard({ title }: Props) {
     <div className="col-span-2 bg-card border rounded-sm p-4">
       <div className="flex justify-between">
         <h2>{title}</h2>
-        <span className="text-sm">Monthly</span>
+        {/*<span className="text-sm">Monthly</span>*/}
+        <Select defaultValue="monthly">
+          <SelectTrigger className="w-full max-w-24 rounded-sm border-border/70 text-xs">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="monthly">Monthly</SelectItem>
+              <SelectItem value="yearly">Yearly</SelectItem>
+              {/*<SelectItem></SelectItem>*/}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
       </div>
       <ChartContainer config={chartConfig} className="max-h-48 w-full">
         <AreaChart
