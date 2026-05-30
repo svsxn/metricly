@@ -50,7 +50,7 @@ export default function ChartCard({ title }: Props) {
   };
 
   return (
-    <div className="col-span-2 bg-card border rounded-sm p-4">
+    <div className="col-span-4 lg:col-span-2 bg-card border rounded-sm p-4">
       <div className="flex justify-between">
         <h2>{title}</h2>
         {/*<span className="text-sm">Monthly</span>*/}
