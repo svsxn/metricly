@@ -11,3 +11,10 @@ type NavItem = {
   name: string;
   href: string;
 };
+
+type Activity = {
+  Icon: LucideIcon;
+  title: string;
+  description: string;
+  time: string;
+};

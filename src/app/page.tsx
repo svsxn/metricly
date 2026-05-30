@@ -1,6 +1,7 @@
 import Card from "@/components/dashboard/card";
 import ChartCard from "@/components/dashboard/chart-card";
 import Header from "@/components/dashboard/header";
+import RecentActivity from "@/components/dashboard/recent-activity";
 import { CARDS } from "@/data/cards";
 
 export default function Home() {
@@ -19,8 +20,8 @@ export default function Home() {
         ))}
         <ChartCard title="Revenue Over Time" />
         <ChartCard title="Active Users Over Time" />
-        <div className="h-64 col-span-2 bg-card border rounded-sm"></div>
-        <div className="h-64 col-span-2 bg-card border rounded-sm"></div>
+        <RecentActivity />
+        <div className="min-h-fit col-span-2 bg-card border rounded-sm"></div>
         <div className="h-64 col-span-4 bg-card border rounded-sm"></div>
       </div>
     </div>
