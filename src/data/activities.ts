@@ -32,10 +32,4 @@ export const ACTIVITIES: Activity[] = [
     description: "jessica@example.com",
     time: "2m",
   },
-  {
-    Icon: UserIcon,
-    title: "New user singed up",
-    description: "jessica@example.com",
-    time: "2m",
-  },
 ];

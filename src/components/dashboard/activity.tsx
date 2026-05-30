@@ -9,7 +9,7 @@ type Props = {
 
 export default function Activity({ title, description, Icon, time }: Props) {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between hover:bg-primary/20 transition-all rounded-md p-1 hover:px-2 hover:cursor-pointer">
       <div className="flex gap-2 items-center">
         <div className="p-1.5 rounded-full bg-primary">
           <Icon size={20} />
