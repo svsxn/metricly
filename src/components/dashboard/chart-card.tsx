@@ -11,10 +11,11 @@ import Card from "../card";
 
 type Props = {
   title: string;
-  // color: string;
+  color: string;
+  seriesLabel: string;
 };
 
-export default function ChartCard({ title }: Props) {
+export default function ChartCard({ title, color, seriesLabel }: Props) {
   return (
     <Card
       header={{
@@ -35,7 +36,7 @@ export default function ChartCard({ title }: Props) {
       }}
       className="col-span-4 lg:col-span-2"
     >
-      <Chart />
+      <Chart color={color} seriesLabel={seriesLabel} />
     </Card>
   );
 }

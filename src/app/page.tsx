@@ -18,8 +18,16 @@ export default function Home() {
             amount={card.amount}
           />
         ))}
-        <ChartCard title="Revenue Over Time" />
-        <ChartCard title="Active Users Over Time" />
+        <ChartCard
+          title="Revenue Over Time"
+          color="var(--chart-1)"
+          seriesLabel="Revenue"
+        />
+        <ChartCard
+          title="Active Users Over Time"
+          color="var(--chart-2)"
+          seriesLabel="Users"
+        />
         <RecentActivity />
         <div className="min-h-fit col-span-2 bg-card border rounded-sm"></div>
         <div className="h-64 col-span-4 bg-card border rounded-sm"></div>

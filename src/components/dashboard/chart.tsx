@@ -7,6 +7,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "../ui/chart";
+import { useId } from "react";
 
 const chartData = [
   { month: "June", amount: 12400 },
@@ -26,21 +27,28 @@ const chartData = [
 const chartConfig = {
   amount: {
     label: "Amount",
-    color: "var(--chart-1)",
+    color: "var(--chart-color)",
   },
 } satisfies ChartConfig;
 
-export default function Chart() {
+type Props = {
+  color: string;
+  seriesLabel: string;
+};
+
+export default function Chart({ color, seriesLabel }: Props) {
+  const gradientId = useId();
+
   const formatYAxis = (value: number) => {
     if (value === 0) return "$0";
     return `$${(value / 1000).toFixed(0)}k`;
   };
 
   return (
-    <div>
+    <div style={{ "--chart-color": color } as React.CSSProperties}>
       <div className="flex items-center gap-1.5 text-muted-foreground text-[13px]">
-        <div className="h-1 w-4 shrink-0 rounded-full bg-primary" />
-        Revenue
+        <div className="h-1 w-4 shrink-0 rounded-full bg-(--chart-color)" />
+        {seriesLabel}
       </div>
       <ChartContainer config={chartConfig} className="max-h-56 w-full">
         <AreaChart
@@ -68,16 +76,24 @@ export default function Chart() {
             width={40}
           />
           <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-          <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="var(--chart-1)" stopOpacity={0.8} />
-            <stop offset="95%" stopColor="var(--chart-1)" stopOpacity={0.1} />
+          <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+            <stop
+              offset="5%"
+              stopColor="var(--chart-color)"
+              stopOpacity={0.8}
+            />
+            <stop
+              offset="95%"
+              stopColor="var(--chart-color)"
+              stopOpacity={0.1}
+            />
           </linearGradient>
           <Area
             dataKey="amount"
             type="linear"
-            fill="url(#fill)"
+            fill={`url(#${gradientId})`}
             fillOpacity={0.4}
-            stroke="var(--chart-1)"
+            stroke="var(--chart-color)"
             stackId="a"
           />
         </AreaChart>
