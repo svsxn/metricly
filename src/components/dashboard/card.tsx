@@ -1,5 +1,6 @@
 import type { Card } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
+import Box from "../box";
 
 type Props = Card & {
   index: number;
@@ -15,7 +16,7 @@ const colorMap: Record<number, { bg: string; icon: string }> = {
 export default function Card({ index, Icon, title, amount }: Props) {
   const styles = colorMap[index + 1];
   return (
-    <div className="flex flex-col col-span-2 xl:col-span-1 gap-3 bg-card rounded-md p-4 border">
+    <Box className="col-span-2 xl:col-span-1">
       <div className="flex items-center gap-3">
         <div className={`${styles.bg} p-1.5 rounded-md`}>
           <Icon color={styles.icon} />
@@ -30,6 +31,6 @@ export default function Card({ index, Icon, title, amount }: Props) {
         </div>
         <span className="text-muted-foreground">vs Apr 1 - Apr 30</span>
       </div>
-    </div>
+    </Box>
   );
 }

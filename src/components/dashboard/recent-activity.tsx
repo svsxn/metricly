@@ -1,12 +1,13 @@
 import { ACTIVITIES } from "@/data/activities";
 import Activity from "./activity";
 import { ArrowRightIcon } from "lucide-react";
+import Box from "../box";
 
 export default function RecentActivity() {
   return (
-    <div className="flex flex-col gap-4 col-span-2 bg-card border rounded-sm px-6 py-5">
+    <Box className="col-span-2">
       <h2>Recent Activity</h2>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-1">
         {ACTIVITIES.map((activity, index) => (
           <Activity
             key={index}
@@ -25,6 +26,6 @@ export default function RecentActivity() {
           className="group-hover:translate-x-1 transition-transform"
         />
       </div>
-    </div>
+    </Box>
   );
 }

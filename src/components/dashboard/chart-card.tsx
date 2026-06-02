@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import Box from "../box";
 
 type Props = {
   title: string;
@@ -50,7 +51,7 @@ export default function ChartCard({ title }: Props) {
   };
 
   return (
-    <div className="col-span-4 lg:col-span-2 bg-card border rounded-sm p-4">
+    <Box className="col-span-4 lg:col-span-2">
       <div className="flex justify-between">
         <h2>{title}</h2>
         {/*<span className="text-sm">Monthly</span>*/}
@@ -67,50 +68,52 @@ export default function ChartCard({ title }: Props) {
           </SelectContent>
         </Select>
       </div>
-      <div className="flex items-center gap-1.5 text-muted-foreground text-[13px]">
-        <div className="h-1 w-4 shrink-0 rounded-full bg-primary" />
-        Revenue
+      <div>
+        <div className="flex items-center gap-1.5 text-muted-foreground text-[13px]">
+          <div className="h-1 w-4 shrink-0 rounded-full bg-primary" />
+          Revenue
+        </div>
+        <ChartContainer config={chartConfig} className="max-h-56 w-full">
+          <AreaChart
+            accessibilityLayer
+            data={chartData}
+            margin={{
+              left: 2,
+              right: 12,
+              top: 18,
+            }}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="month"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              tickFormatter={(value) => value.slice(0, 3)}
+            />
+            <YAxis
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              tickFormatter={formatYAxis}
+              width={40}
+            />
+            <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+            <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="var(--chart-1)" stopOpacity={0.8} />
+              <stop offset="95%" stopColor="var(--chart-1)" stopOpacity={0.1} />
+            </linearGradient>
+            <Area
+              dataKey="amount"
+              type="linear"
+              fill="url(#fill)"
+              fillOpacity={0.4}
+              stroke="var(--chart-1)"
+              stackId="a"
+            />
+          </AreaChart>
+        </ChartContainer>
       </div>
-      <ChartContainer config={chartConfig} className="max-h-56 w-full">
-        <AreaChart
-          accessibilityLayer
-          data={chartData}
-          margin={{
-            left: 2,
-            right: 12,
-            top: 18,
-          }}
-        >
-          <CartesianGrid vertical={false} />
-          <XAxis
-            dataKey="month"
-            tickLine={false}
-            axisLine={false}
-            tickMargin={8}
-            tickFormatter={(value) => value.slice(0, 3)}
-          />
-          <YAxis
-            tickLine={false}
-            axisLine={false}
-            tickMargin={8}
-            tickFormatter={formatYAxis}
-            width={40}
-          />
-          <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-          <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="var(--chart-1)" stopOpacity={0.8} />
-            <stop offset="95%" stopColor="var(--chart-1)" stopOpacity={0.1} />
-          </linearGradient>
-          <Area
-            dataKey="amount"
-            type="linear"
-            fill="url(#fill)"
-            fillOpacity={0.4}
-            stroke="var(--chart-1)"
-            stackId="a"
-          />
-        </AreaChart>
-      </ChartContainer>
-    </div>
+    </Box>
   );
 }
