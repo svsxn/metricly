@@ -9,7 +9,7 @@ export default function RecentActivity() {
       header={{
         title: "Recent Activity",
       }}
-      className="col-span-2"
+      className="col-span-4 sm:col-span-2"
     >
       <div className="flex flex-col gap-1">
         {ACTIVITIES.map((activity, index) => (
