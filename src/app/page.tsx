@@ -29,7 +29,7 @@ export default function Home() {
           seriesLabel="Users"
         />
         <RecentActivity />
-        <div className="min-h-fit col-span-2 bg-card border rounded-sm"></div>
+        <div className="min-h-64 sm:min-h-fit col-span-4 sm:col-span-2 bg-card border rounded-sm"></div>
         <div className="h-64 col-span-4 bg-card border rounded-sm"></div>
       </div>
     </div>
