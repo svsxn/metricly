@@ -1,6 +1,6 @@
 import { LucideIcon } from "lucide-react";
 
-type Card = {
+type Stat = {
   Icon: LucideIcon;
   title: string;
   amount: string;

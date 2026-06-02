@@ -1,4 +1,4 @@
-import { Card } from "@/types/general";
+import { Stat } from "@/types/general";
 import {
   ActivityIcon,
   CircleDollarSignIcon,
@@ -6,7 +6,7 @@ import {
   UsersIcon,
 } from "lucide-react";
 
-export const CARDS: Card[] = [
+export const STATS: Stat[] = [
   {
     Icon: CircleDollarSignIcon,
     title: "Monthly Revenue",

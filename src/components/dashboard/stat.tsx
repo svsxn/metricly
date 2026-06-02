@@ -1,8 +1,8 @@
-import type { Card } from "@/types/general";
+import type { Stat } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
-import Box from "../box";
+import Card from "../card";
 
-type Props = Card & {
+type Props = Stat & {
   index: number;
 };
 
@@ -13,16 +13,20 @@ const colorMap: Record<number, { bg: string; icon: string }> = {
   4: { bg: "bg-chart-5/20", icon: "var(--chart-5)" },
 };
 
-export default function Card({ index, Icon, title, amount }: Props) {
+export default function Stat({ index, Icon, title, amount }: Props) {
   const styles = colorMap[index + 1];
   return (
-    <Box className="col-span-2 xl:col-span-1">
-      <div className="flex items-center gap-3">
-        <div className={`${styles.bg} p-1.5 rounded-md`}>
-          <Icon color={styles.icon} />
-        </div>
-        <h2>{title}</h2>
-      </div>
+    <Card
+      header={{
+        title: title,
+        icon: {
+          Icon: Icon,
+          color: styles.icon,
+          background: styles.bg,
+        },
+      }}
+      className="col-span-2 xl:col-span-1"
+    >
       <span className="text-3xl font-medium">{amount}</span>
       <div className="flex text-xs gap-2">
         <div className="flex gap-1 text-emerald-500">
@@ -31,6 +35,6 @@ export default function Card({ index, Icon, title, amount }: Props) {
         </div>
         <span className="text-muted-foreground">vs Apr 1 - Apr 30</span>
       </div>
-    </Box>
+    </Card>
   );
 }

@@ -1,16 +1,16 @@
-import Card from "@/components/dashboard/card";
+import Stat from "@/components/dashboard/stat";
 import ChartCard from "@/components/dashboard/chart-card";
 import Header from "@/components/dashboard/header";
 import RecentActivity from "@/components/dashboard/recent-activity";
-import { CARDS } from "@/data/cards";
+import { STATS } from "@/data/stats";
 
 export default function Home() {
   return (
     <div className="p-6">
       <Header />
       <div className="grid grid-cols-4 gap-4 mt-7">
-        {CARDS.map((card, index) => (
-          <Card
+        {STATS.map((card, index) => (
+          <Stat
             key={card.title}
             index={index}
             Icon={card.Icon}
