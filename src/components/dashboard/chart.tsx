@@ -20,7 +20,7 @@ const chartData = [
   { month: "January", amount: 11200 },
   { month: "February", amount: 16800 },
   { month: "March", amount: 21300 },
-  { month: "April", amount: 13500 },
+  { month: "April", amount: 20963 },
   { month: "May", amount: 24820 },
 ];
 
