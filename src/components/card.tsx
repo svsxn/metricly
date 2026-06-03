@@ -27,7 +27,7 @@ export default function Card({ header, children, className }: Props) {
         className,
       )}
     >
-      <div className="flex items-center justify-between">
+      <div className="flex justify-between">
         {header.icon ? (
           <div className="flex items-center gap-3">
             <div className={cn("p-1.5 rounded-md", header.icon.background)}>
