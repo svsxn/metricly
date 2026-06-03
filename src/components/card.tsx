@@ -23,7 +23,7 @@ export default function Card({ header, children, className }: Props) {
   return (
     <div
       className={cn(
-        "flex flex-col gap-3 bg-card border rounded-sm px-6 py-5",
+        "flex flex-col gap-3 bg-card border rounded-sm p-4 sm:px-6 sm:py-5",
         className,
       )}
     >
