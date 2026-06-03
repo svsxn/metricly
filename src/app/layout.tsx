@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className="min-h-full flex">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
