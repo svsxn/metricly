@@ -6,8 +6,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-import Chart from "./chart";
 import Card from "../card";
+import LineChart from "./charts/line-chart";
 
 type Props = {
   title: string;
@@ -15,7 +15,7 @@ type Props = {
   seriesLabel: string;
 };
 
-export default function ChartCard({ title, color, seriesLabel }: Props) {
+export default function OverTime({ title, color, seriesLabel }: Props) {
   return (
     <Card
       header={{
@@ -36,7 +36,7 @@ export default function ChartCard({ title, color, seriesLabel }: Props) {
       }}
       className="col-span-4 lg:col-span-2"
     >
-      <Chart color={color} seriesLabel={seriesLabel} />
+      <LineChart color={color} seriesLabel={seriesLabel} />
     </Card>
   );
 }

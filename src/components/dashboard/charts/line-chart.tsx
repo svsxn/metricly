@@ -1,13 +1,13 @@
 "use client";
 
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts";
+import { useId } from "react";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "../ui/chart";
-import { useId } from "react";
+} from "@/components/ui/chart";
 
 const chartData = [
   { month: "June", amount: 12400 },
@@ -36,7 +36,7 @@ type Props = {
   seriesLabel: string;
 };
 
-export default function Chart({ color, seriesLabel }: Props) {
+export default function LineChart({ color, seriesLabel }: Props) {
   const gradientId = useId();
 
   const formatYAxis = (value: number) => {

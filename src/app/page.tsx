@@ -1,8 +1,8 @@
 import Stat from "@/components/dashboard/stat";
-import ChartCard from "@/components/dashboard/chart-card";
 import Header from "@/components/dashboard/header";
 import RecentActivity from "@/components/dashboard/recent-activity";
 import { STATS } from "@/data/stats";
+import OverTime from "@/components/dashboard/over-time";
 
 export default function Home() {
   return (
@@ -18,12 +18,12 @@ export default function Home() {
             amount={card.amount}
           />
         ))}
-        <ChartCard
+        <OverTime
           title="Revenue Over Time"
           color="var(--chart-1)"
           seriesLabel="Revenue"
         />
-        <ChartCard
+        <OverTime
           title="Active Users Over Time"
           color="var(--chart-2)"
           seriesLabel="Users"
