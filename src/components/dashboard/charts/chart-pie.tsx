@@ -44,7 +44,7 @@ const chartConfig = {
 
 export default function ChartPie() {
   return (
-    <ChartContainer config={chartConfig} className="max-h-62.5">
+    <ChartContainer config={chartConfig} className="relative h-62.5 w-62.5">
       <PieChart>
         <ChartTooltip
           cursor={false}
@@ -55,8 +55,17 @@ export default function ChartPie() {
           dataKey="visitors"
           nameKey="browser"
           innerRadius={75}
+          cornerRadius="50%"
+          paddingAngle={5}
         />
       </PieChart>
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <div className="flex flex-col items-center">
+          <span className="text-xs text-muted-foreground">Users</span>
+          <span className="text-2xl font-semibold">12,450</span>
+          <span className="text-xs text-muted-foreground">Total</span>
+        </div>
+      </div>
     </ChartContainer>
   );
 }
