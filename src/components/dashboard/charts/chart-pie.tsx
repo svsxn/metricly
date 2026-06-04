@@ -46,7 +46,7 @@ export default function ChartPie() {
   return (
     <ChartContainer
       config={chartConfig}
-      className="relative aspect-square w-full max-w-62.5 min-w-0"
+      className="relative aspect-square w-full max-w-60 min-w-0"
     >
       <PieChart>
         <ChartTooltip
@@ -57,8 +57,8 @@ export default function ChartPie() {
           data={chartData}
           dataKey="visitors"
           nameKey="browser"
-          innerRadius="65%"
-          outerRadius="80%"
+          innerRadius="75%"
+          outerRadius="95%"
           cornerRadius="50%"
           paddingAngle={5}
         />
