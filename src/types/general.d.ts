@@ -18,3 +18,12 @@ type Activity = {
   description: string;
   time: string;
 };
+
+type Customer = {
+  name: string;
+  email: string;
+  plan: "Business" | "Pro";
+  status: "Active" | "Trial" | "Canceled";
+  mmr: number;
+  joined: string;
+};

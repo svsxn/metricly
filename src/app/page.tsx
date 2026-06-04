@@ -4,6 +4,7 @@ import RecentActivity from "@/components/dashboard/recent-activity";
 import { STATS } from "@/data/stats";
 import OverTime from "@/components/dashboard/over-time";
 import AcquisitionChannels from "@/components/dashboard/acquisition-channels";
+import RecentCustomers from "@/components/dashboard/recent-customers";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
         />
         <RecentActivity />
         <AcquisitionChannels />
-        <div className="h-64 col-span-4 bg-card border rounded-sm"></div>
+        <RecentCustomers />
       </div>
     </div>
   );
