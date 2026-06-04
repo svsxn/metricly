@@ -95,6 +95,7 @@ export default function ChartArea({ color, seriesLabel }: Props) {
             fillOpacity={0.4}
             stroke="var(--chart-color)"
             stackId="a"
+            strokeWidth={1.25}
           />
         </AreaChart>
       </ChartContainer>
