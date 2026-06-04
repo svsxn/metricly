@@ -7,7 +7,7 @@ import {
   SelectValue,
 } from "../ui/select";
 import Card from "../card";
-import LineChart from "./charts/line-chart";
+import ChartArea from "./charts/chart-area";
 
 type Props = {
   title: string;
@@ -36,7 +36,7 @@ export default function OverTime({ title, color, seriesLabel }: Props) {
       }}
       className="col-span-4 lg:col-span-2"
     >
-      <LineChart color={color} seriesLabel={seriesLabel} />
+      <ChartArea color={color} seriesLabel={seriesLabel} />
     </Card>
   );
 }

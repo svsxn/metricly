@@ -36,7 +36,7 @@ type Props = {
   seriesLabel: string;
 };
 
-export default function LineChart({ color, seriesLabel }: Props) {
+export default function ChartArea({ color, seriesLabel }: Props) {
   const gradientId = useId();
 
   const formatYAxis = (value: number) => {
