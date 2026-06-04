@@ -28,7 +28,7 @@ export default function Stat({ index, Icon, title, amount }: Props) {
       className="col-span-2 xl:col-span-1"
     >
       <span className="text-3xl font-medium">{amount}</span>
-      <div className="flex text-xs gap-2">
+      <div className="flex text-xs gap-2 flex-wrap">
         <div className="flex gap-1 text-emerald-500">
           <ArrowUpIcon size={16} />
           <span>+18.4%</span>

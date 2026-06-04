@@ -33,7 +33,9 @@ export default function Card({ header, children, className }: Props) {
             <div className={cn("p-1.5 rounded-md", header.icon.background)}>
               <header.icon.Icon color={header.icon.color} />
             </div>
-            <h2>{header.title}</h2>
+            <h2 className="text-sm md:text-base leading-tight">
+              {header.title}
+            </h2>
           </div>
         ) : (
           <h2>{header.title}</h2>
