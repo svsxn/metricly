@@ -59,8 +59,8 @@ export default function ChartPie() {
           nameKey="browser"
           innerRadius="75%"
           outerRadius="95%"
-          cornerRadius="50%"
-          paddingAngle={5}
+          cornerRadius="5%"
+          paddingAngle={4}
         />
       </PieChart>
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
