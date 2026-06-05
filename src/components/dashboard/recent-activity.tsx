@@ -22,7 +22,7 @@ export default function RecentActivity() {
           />
         ))}
       </div>
-      <div className="group flex gap-2 hover:cursor-pointer">
+      <div className="group flex gap-2 hover:cursor-pointer w-fit">
         <span className="text-primary text-xs">View all activity</span>
         <ArrowRightIcon
           color="var(--primary)"
