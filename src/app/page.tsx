@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="p-6">
       <Header />
-      <div className="grid grid-cols-4 gap-4 mt-7">
+      <div className="grid grid-cols-4 gap-4 mt-6">
         {STATS.map((card, index) => (
           <Stat
             key={card.title}
