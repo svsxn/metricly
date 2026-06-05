@@ -82,7 +82,10 @@ export default function CustomersTable() {
           {columns.map((column) => (
             <TableHead
               key={column.header}
-              className={cn("h-8 text-muted-foreground", column.headClassName)}
+              className={cn(
+                "h-8 px-1 text-muted-foreground",
+                column.headClassName,
+              )}
             >
               {column.header}
             </TableHead>
@@ -95,7 +98,7 @@ export default function CustomersTable() {
             {columns.map((column) => (
               <TableCell
                 key={column.header}
-                className={cn("py-1", column.cellClassName)}
+                className={cn("p-1", column.cellClassName)}
               >
                 {column.render(customer)}
               </TableCell>
