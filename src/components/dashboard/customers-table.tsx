@@ -11,16 +11,18 @@ import { Badge } from "../ui/badge";
 import { Customer } from "@/types/general";
 import { cn } from "@/lib/utils";
 
+const badgeBaseClassName = "rounded-xs font-semibold";
+
 const planClassName = {
-  Business: "border-primary/30 bg-primary/10 text-primary",
-  Pro: "border-blue-500/30 bg-blue-500/10 text-blue-400",
-  Basic: "border-muted-foreground/30 bg-muted/40 text-muted-foreground",
+  Business: "bg-primary/25 text-primary",
+  Pro: "bg-blue-500/25 text-blue-400",
+  Basic: "bg-muted/65 text-muted-foreground",
 } as const;
 
 const statusClassName = {
-  Active: "border-emerald-500/30 bg-emerald-500/10 text-emerald-400",
-  Trial: "border-amber-500/30 bg-amber-500/10 text-amber-400",
-  Canceled: "border-red-500/30 bg-red-500/10 text-red-400",
+  Active: "bg-emerald-500/25 text-emerald-400",
+  Trial: "bg-amber-500/25 text-amber-400",
+  Canceled: "bg-red-500/25 text-red-400",
 } as const;
 
 type Column = {
@@ -44,7 +46,7 @@ const columns: Column[] = [
   {
     header: "Plan",
     render: (customer) => (
-      <Badge variant="outline" className={planClassName[customer.plan]}>
+      <Badge className={cn(badgeBaseClassName, planClassName[customer.plan])}>
         {customer.plan}
       </Badge>
     ),
@@ -52,7 +54,9 @@ const columns: Column[] = [
   {
     header: "Status",
     render: (customer) => (
-      <Badge variant="outline" className={statusClassName[customer.status]}>
+      <Badge
+        className={cn(badgeBaseClassName, statusClassName[customer.status])}
+      >
         {customer.status}
       </Badge>
     ),
