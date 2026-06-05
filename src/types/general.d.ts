@@ -24,6 +24,6 @@ type Customer = {
   email: string;
   plan: "Business" | "Pro";
   status: "Active" | "Trial" | "Canceled";
-  mmr: number;
+  mrr: number;
   joined: string;
 };

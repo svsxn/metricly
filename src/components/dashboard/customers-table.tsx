@@ -8,16 +8,8 @@ import {
   TableRow,
 } from "../ui/table";
 import { Badge } from "../ui/badge";
-
-const tableHeads = [
-  "Customer",
-  "Email",
-  "Plan",
-  "Status",
-  "MRR",
-  "Joined",
-  "Actions",
-] as const;
+import { Customer } from "@/types/general";
+import { cn } from "@/lib/utils";
 
 const planClassName = {
   Business: "border-primary/30 bg-primary/10 text-primary",
@@ -31,14 +23,68 @@ const statusClassName = {
   Canceled: "border-red-500/30 bg-red-500/10 text-red-400",
 } as const;
 
+type Column = {
+  header: string;
+  headClassName?: string;
+  cellClassName?: string;
+  render: (customer: Customer) => React.ReactNode;
+};
+
+const columns: Column[] = [
+  {
+    header: "Customer",
+    cellClassName: "font-medium",
+    render: (customer) => customer.name,
+  },
+  {
+    header: "Email",
+    cellClassName: "text-muted-foreground",
+    render: (customer) => customer.email,
+  },
+  {
+    header: "Plan",
+    render: (customer) => (
+      <Badge variant="outline" className={planClassName[customer.plan]}>
+        {customer.plan}
+      </Badge>
+    ),
+  },
+  {
+    header: "Status",
+    render: (customer) => (
+      <Badge variant="outline" className={statusClassName[customer.status]}>
+        {customer.status}
+      </Badge>
+    ),
+  },
+  {
+    header: "MRR",
+    render: (customer) => `$${customer.mrr}.00`,
+  },
+  {
+    header: "Joined",
+    cellClassName: "text-muted-foreground",
+    render: (customer) => customer.joined,
+  },
+  {
+    header: "Actions",
+    headClassName: "text-right",
+    cellClassName: "text-right",
+    render: () => "...",
+  },
+];
+
 export default function CustomersTable() {
   return (
     <Table>
       <TableHeader>
         <TableRow>
-          {tableHeads.map((head) => (
-            <TableHead key={head} className="text-muted-foreground">
-              {head}
+          {columns.map((column) => (
+            <TableHead
+              key={column.header}
+              className={cn("h-8 text-muted-foreground", column.headClassName)}
+            >
+              {column.header}
             </TableHead>
           ))}
         </TableRow>
@@ -46,24 +92,14 @@ export default function CustomersTable() {
       <TableBody>
         {CUSTOMERS.map((customer) => (
           <TableRow key={customer.email}>
-            <TableCell>{customer.name}</TableCell>
-            <TableCell>{customer.email}</TableCell>
-            <TableCell>
-              <Badge variant="outline" className={planClassName[customer.plan]}>
-                {customer.plan}
-              </Badge>
-            </TableCell>
-            <TableCell>
-              <Badge
-                variant="outline"
-                className={statusClassName[customer.status]}
+            {columns.map((column) => (
+              <TableCell
+                key={column.header}
+                className={cn("py-1", column.cellClassName)}
               >
-                {customer.status}
-              </Badge>
-            </TableCell>
-            <TableCell>${customer.mmr}.00</TableCell>
-            <TableCell>{customer.joined}</TableCell>
-            <TableCell>...</TableCell>
+                {column.render(customer)}
+              </TableCell>
+            ))}
           </TableRow>
         ))}
       </TableBody>

@@ -6,7 +6,7 @@ export const CUSTOMERS: Customer[] = [
     email: "billing@acme.com",
     plan: "Business",
     status: "Active",
-    mmr: 499,
+    mrr: 499,
     joined: "May 29, 2026",
   },
   {
@@ -14,7 +14,7 @@ export const CUSTOMERS: Customer[] = [
     email: "john@example.com",
     plan: "Pro",
     status: "Active",
-    mmr: 29,
+    mrr: 29,
     joined: "May 28, 2026",
   },
   {
@@ -22,7 +22,7 @@ export const CUSTOMERS: Customer[] = [
     email: "hello@softwarehouse.io",
     plan: "Pro",
     status: "Trial",
-    mmr: 29,
+    mrr: 29,
     joined: "May 26, 2026",
   },
 ];
