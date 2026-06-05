@@ -11,7 +11,7 @@ export default function RecentActivity() {
       }}
       className="col-span-4 sm:col-span-2"
     >
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col">
         {ACTIVITIES.map((activity, index) => (
           <Activity
             key={index}
