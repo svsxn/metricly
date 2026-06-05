@@ -8,18 +8,26 @@ import {
   TableRow,
 } from "../ui/table";
 
+const tableHeads = [
+  "Customer",
+  "Email",
+  "Plan",
+  "Status",
+  "MRR",
+  "Joined",
+  "Actions",
+] as const;
+
 export default function CustomersTable() {
   return (
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead>Customer</TableHead>
-          <TableHead>Email</TableHead>
-          <TableHead>Plan</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>MMR</TableHead>
-          <TableHead>Joined</TableHead>
-          <TableHead>Actions</TableHead>
+          {tableHeads.map((head) => (
+            <TableHead key={head} className="text-muted-foreground">
+              {head}
+            </TableHead>
+          ))}
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -29,7 +37,7 @@ export default function CustomersTable() {
             <TableCell>{customer.email}</TableCell>
             <TableCell>{customer.plan}</TableCell>
             <TableCell>{customer.status}</TableCell>
-            <TableCell>{customer.mmr}</TableCell>
+            <TableCell>${customer.mmr}.00</TableCell>
             <TableCell>{customer.joined}</TableCell>
             <TableCell>...</TableCell>
           </TableRow>
