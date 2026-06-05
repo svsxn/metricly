@@ -11,7 +11,7 @@ import { Badge } from "../ui/badge";
 import { Customer } from "@/types/general";
 import { cn } from "@/lib/utils";
 
-const badgeBaseClassName = "rounded-xs font-semibold";
+const badgeBaseClassName = "p-1 rounded-xs font-semibold";
 
 const planClassName = {
   Business: "bg-primary/25 text-primary",
@@ -74,8 +74,8 @@ const columns: Column[] = [
   },
   {
     header: "Actions",
-    headClassName: "text-right",
-    cellClassName: "text-right",
+    headClassName: "hidden sm:table-cell text-right",
+    cellClassName: "hidden sm:table-cell text-right",
     render: () => "...",
   },
 ];
