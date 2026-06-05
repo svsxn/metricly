@@ -50,7 +50,7 @@ export default function ChartArea({ color, seriesLabel }: Props) {
         <div className="h-1 w-4 shrink-0 rounded-full bg-(--chart-color)" />
         {seriesLabel}
       </div>
-      <ChartContainer config={chartConfig} className="max-h-56 w-full">
+      <ChartContainer config={chartConfig} className="max-h-48 w-full">
         <AreaChart
           accessibilityLayer
           data={chartData}
