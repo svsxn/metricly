@@ -11,7 +11,7 @@ import { Badge } from "../ui/badge";
 import { Customer } from "@/types/general";
 import { cn } from "@/lib/utils";
 
-const badgeBaseClassName = "p-1 rounded-xs font-semibold";
+const badgeBaseClassName = "p-1 rounded-[3px] font-semibold";
 
 const planClassName = {
   Business: "bg-primary/25 text-primary",
