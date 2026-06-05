@@ -106,7 +106,7 @@ export default function CustomersTable() {
   return (
     <Table>
       <TableHeader>
-        <TableRow>
+        <TableRow className="hover:bg-transparent">
           {columns.map((column) => (
             <TableHead
               key={column.header}
