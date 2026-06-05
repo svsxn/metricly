@@ -1,6 +1,13 @@
 "use client";
 
-import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts";
+import {
+  Area,
+  AreaChart,
+  CartesianGrid,
+  DotProps,
+  XAxis,
+  YAxis,
+} from "recharts";
 import { useId } from "react";
 import {
   ChartConfig,
@@ -8,6 +15,16 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+
+function ChartDot({ cx, cy }: DotProps) {
+  if (typeof cx !== "number" || typeof cy !== "number") {
+    return null;
+  }
+
+  return (
+    <circle cx={cx} cy={cy} r={3} fill="var(--chart-color)" stroke="none" />
+  );
+}
 
 const chartData = [
   { month: "June", amount: 12400 },
@@ -96,6 +113,13 @@ export default function ChartArea({ color, seriesLabel }: Props) {
             stroke="var(--chart-color)"
             stackId="a"
             strokeWidth={1.25}
+            dot={<ChartDot />}
+            activeDot={{
+              r: 4,
+              fill: "#fff",
+              stroke: "var(--chart-color)",
+              strokeWidth: 2.5,
+            }}
           />
         </AreaChart>
       </ChartContainer>
