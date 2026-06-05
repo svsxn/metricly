@@ -40,7 +40,8 @@ const columns: Column[] = [
   },
   {
     header: "Email",
-    cellClassName: "text-muted-foreground",
+    headClassName: "hidden md:table-cell",
+    cellClassName: "hidden md:table-cell text-muted-foreground",
     render: (customer) => customer.email,
   },
   {
@@ -67,7 +68,8 @@ const columns: Column[] = [
   },
   {
     header: "Joined",
-    cellClassName: "text-muted-foreground",
+    headClassName: "hidden md:table-cell",
+    cellClassName: "hidden md:table-cell text-muted-foreground",
     render: (customer) => customer.joined,
   },
   {
