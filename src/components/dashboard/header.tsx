@@ -11,7 +11,7 @@ export default function Header() {
           business.
         </p>
       </div>
-      <div className="flex flex-col items-end gap-8">
+      <div className="flex flex-col items-end gap-6">
         <div className="flex gap-6 items-center">
           <SearchIcon />
           <BellIcon />
