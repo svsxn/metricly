@@ -46,7 +46,7 @@ export default function ChartPie() {
   return (
     <ChartContainer
       config={chartConfig}
-      className="relative aspect-square w-full max-w-60 min-w-0"
+      className="relative aspect-square w-full max-w-56 min-w-0"
     >
       <PieChart>
         <ChartTooltip
