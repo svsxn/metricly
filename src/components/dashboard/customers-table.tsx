@@ -88,7 +88,7 @@ const columns: Column[] = [
     render: () => (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" className="size-8">
+          <Button variant="ghost" size="icon" className="size-5">
             <MoreHorizontalIcon />
           </Button>
         </DropdownMenuTrigger>
@@ -126,7 +126,7 @@ export default function CustomersTable() {
             {columns.map((column) => (
               <TableCell
                 key={column.header}
-                className={cn("p-1", column.cellClassName)}
+                className={cn("py-1", column.cellClassName)}
               >
                 {column.render(customer)}
               </TableCell>
