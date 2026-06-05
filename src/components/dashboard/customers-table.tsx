@@ -1,3 +1,5 @@
+"use client";
+
 import { CUSTOMERS } from "@/data/customers";
 import {
   Table,
