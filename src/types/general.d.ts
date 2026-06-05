@@ -22,7 +22,7 @@ type Activity = {
 type Customer = {
   name: string;
   email: string;
-  plan: "Business" | "Pro";
+  plan: "Business" | "Pro" | "Basic";
   status: "Active" | "Trial" | "Canceled";
   mrr: number;
   joined: string;
