@@ -10,6 +10,15 @@ import {
 import { Badge } from "../ui/badge";
 import { Customer } from "@/types/general";
 import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
+import { MoreHorizontalIcon } from "lucide-react";
 
 const badgeBaseClassName = "p-1 rounded-[3px] font-semibold";
 
@@ -76,7 +85,20 @@ const columns: Column[] = [
     header: "Actions",
     headClassName: "hidden sm:table-cell text-right",
     cellClassName: "hidden sm:table-cell text-right",
-    render: () => "...",
+    render: () => (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" size="icon" className="size-8">
+            <MoreHorizontalIcon />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem>Edit</DropdownMenuItem>
+          <DropdownMenuSeparator />
+          <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    ),
   },
 ];
 
