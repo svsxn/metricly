@@ -1,35 +1,29 @@
 import { Activity } from "@/types/general";
-import { UserIcon } from "lucide-react";
 
 export const ACTIVITIES: Activity[] = [
   {
-    Icon: UserIcon,
-    title: "New user singed up",
+    type: "user",
     description: "jessica@example.com",
     time: "2m",
   },
   {
-    Icon: UserIcon,
-    title: "New user singed up",
-    description: "jessica@example.com",
-    time: "2m",
+    type: "subscription",
+    description: "Pro Plan - $29/month",
+    time: "15m",
   },
   {
-    Icon: UserIcon,
-    title: "New user singed up",
-    description: "jessica@example.com",
-    time: "2m",
+    type: "payment",
+    description: "$129 from Acme Inc.",
+    time: "1h",
   },
   {
-    Icon: UserIcon,
-    title: "New user singed up",
-    description: "jessica@example.com",
-    time: "2m",
+    type: "plan",
+    description: "john@example.com upgraded to Business",
+    time: "3h",
   },
   {
-    Icon: UserIcon,
-    title: "New user singed up",
-    description: "jessica@example.com",
-    time: "2m",
+    type: "trial",
+    description: "marketing@launchapp.dev trial ends in 2 days",
+    time: "5h",
   },
 ];

@@ -14,7 +14,7 @@ type NavItem = {
 
 type Activity = {
   Icon: LucideIcon;
-  title: string;
+  type: "user" | "subscription" | "payment" | "plan" | "trial";
   description: string;
   time: string;
 };
