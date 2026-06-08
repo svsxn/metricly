@@ -13,22 +13,22 @@ export const NAV_ITEMS: NavItem[] = [
   {
     Icon: HomeIcon,
     name: "Overview",
-    href: "",
+    href: "/dashboard",
   },
   {
     Icon: ChartNoAxesColumnIcon,
     name: "Analytics",
-    href: "",
+    href: "/dashboard/analytics",
   },
   {
     Icon: Users2Icon,
     name: "Customers",
-    href: "",
+    href: "/dashboard/customers",
   },
   {
     Icon: CreditCardIcon,
     name: "Subscriptions",
-    href: "",
+    href: "/dashboard/subscriptions",
   },
 ];
 
@@ -36,16 +36,16 @@ export const NAV_ITEMS_2: NavItem[] = [
   {
     Icon: SettingsIcon,
     name: "Settings",
-    href: "",
+    href: "/dashboard/settings",
   },
   {
     Icon: PlugIcon,
     name: "Integrations",
-    href: "",
+    href: "/dashboard/integrations",
   },
   {
     Icon: FileTextIcon,
     name: "Billing",
-    href: "",
+    href: "/dashboard/billing",
   },
 ];
