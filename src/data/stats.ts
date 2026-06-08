@@ -1,7 +1,7 @@
 import { Stat } from "@/types/general";
 import {
-  ActivityIcon,
   CircleDollarSignIcon,
+  TrendingDownIcon,
   TrendingUpIcon,
   UsersIcon,
 } from "lucide-react";
@@ -23,7 +23,7 @@ export const STATS: Stat[] = [
     amount: "6.84%",
   },
   {
-    Icon: ActivityIcon,
+    Icon: TrendingDownIcon,
     title: "Churn Rate",
     amount: "2.3%",
   },
