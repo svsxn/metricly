@@ -3,12 +3,6 @@ import Activity from "./activity";
 import { ArrowRightIcon } from "lucide-react";
 import Card from "../card";
 
-const activityClassName = {
-  Business: "bg-primary/25 text-primary",
-  Pro: "bg-blue-500/25 text-blue-400",
-  Basic: "bg-muted/65 text-muted-foreground",
-} as const;
-
 export default function RecentActivity() {
   return (
     <Card
