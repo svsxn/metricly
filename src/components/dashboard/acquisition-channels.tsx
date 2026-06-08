@@ -2,6 +2,27 @@ import { ArrowRightIcon } from "lucide-react";
 import Card from "../card";
 import ChartPie from "./charts/chart-pie";
 
+const channels = [
+  {
+    name: "Direct",
+    users: "2,892",
+    percentage: "32.1%",
+    colorClassName: "bg-chart-1",
+  },
+  {
+    name: "Google Search",
+    users: "2,310",
+    percentage: "27.2%",
+    colorClassName: "bg-chart-2",
+  },
+  {
+    name: "Referral",
+    users: "1,640",
+    percentage: "19.3%",
+    colorClassName: "bg-chart-3",
+  },
+] as const;
+
 export default function AcquisitionChannels() {
   return (
     <Card
@@ -10,39 +31,28 @@ export default function AcquisitionChannels() {
       }}
       className="col-span-4 sm:col-span-2"
     >
-      <div className="flex">
+      <div className="flex flex-col gap-5 xl:flex-row xl:items-center">
         <ChartPie />
-        <div className="mx-auto flex flex-col justify-center gap-2 text-sm">
-          <div className="flex justify-between gap-24">
-            <div className="flex items-center gap-3">
-              <div className="size-2 bg-chart-1 rounded-xs" />
-              <span>Direct</span>
+        <div className="xl:mx-auto w-full xl:max-w-xs space-y-2 text-sm">
+          {channels.map((channel) => (
+            <div
+              key={channel.name}
+              className="grid grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-3"
+            >
+              <div className="flex min-w-0 items-center gap-3">
+                <div
+                  className={`size-2 shrink-0 rounded-xs ${channel.colorClassName}`}
+                />
+                <span className="truncate">{channel.name}</span>
+              </div>
+
+              <span className="tabular-nums">{channel.users}</span>
+
+              <span className="w-12 text-right tabular-nums text-muted-foreground">
+                {channel.percentage}
+              </span>
             </div>
-            <div className="flex gap-12">
-              <span>2,892</span>
-              <span className="text-muted-foreground">32.1%</span>
-            </div>
-          </div>
-          <div className="flex justify-between gap-24">
-            <div className="flex items-center gap-3">
-              <div className="size-2 bg-chart-2 rounded-xs" />
-              <span>Google Search</span>
-            </div>
-            <div className="flex gap-12">
-              <span>2,310</span>
-              <span className="text-muted-foreground">27.2%</span>
-            </div>
-          </div>
-          <div className="flex justify-between gap-24">
-            <div className="flex items-center gap-3">
-              <div className="size-2 bg-chart-3 rounded-xs" />
-              <span>Referall</span>
-            </div>
-            <div className="flex gap-12">
-              <span>1,640</span>
-              <span className="text-muted-foreground">19.3%</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <div className="group flex gap-2 hover:cursor-pointer">
