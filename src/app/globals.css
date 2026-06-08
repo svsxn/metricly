@@ -23,6 +23,11 @@
     --color-chart-3: var(--chart-3);
     --color-chart-2: var(--chart-2);
     --color-chart-1: var(--chart-1);
+    --color-accent-violet: var(--accent-violet);
+    --color-accent-blue: var(--accent-blue);
+    --color-accent-teal: var(--accent-teal);
+    --color-accent-amber: var(--accent-amber);
+    --color-accent-rose: var(--accent-rose);
     --color-ring: var(--ring);
     --color-input: var(--input);
     --color-border: var(--border);
@@ -72,6 +77,11 @@
     --chart-3: oklch(0.439 0 0);
     --chart-4: oklch(0.371 0 0);
     --chart-5: oklch(0.269 0 0);
+    --accent-violet: oklch(0.67 0.17 305);
+    --accent-blue: oklch(0.7 0.12 250);
+    --accent-teal: oklch(0.72 0.13 170);
+    --accent-amber: oklch(0.78 0.15 80);
+    --accent-rose: oklch(0.68 0.18 25);
     --radius: 0.625rem;
     --sidebar: oklch(0.985 0 0);
     --sidebar-foreground: oklch(0.145 0 0);
@@ -112,6 +122,11 @@
     --chart-3: oklch(0.72 0.13 170);
     --chart-4: oklch(0.78 0.15 80);
     --chart-5: oklch(0.68 0.18 25);
+    --accent-violet: oklch(0.67 0.17 305);
+    --accent-blue: oklch(0.7 0.12 250);
+    --accent-teal: oklch(0.72 0.13 170);
+    --accent-amber: oklch(0.78 0.15 80);
+    --accent-rose: oklch(0.68 0.18 25);
     --sidebar: oklch(0.205 0 0);
     --sidebar-foreground: oklch(0.985 0 0);
     --sidebar-primary: oklch(0.488 0.243 264.376);

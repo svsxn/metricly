@@ -18,27 +18,27 @@ const activityMap: Record<Props["type"], ActivityConfig> = {
   user: {
     Icon: UserIcon,
     title: "New user singed up",
-    classes: "bg-chart-1",
+    classes: "bg-accent-violet",
   },
   subscription: {
     Icon: CreditCardIcon,
     title: "New subscription",
-    classes: "bg-chart-2",
+    classes: "bg-accent-blue",
   },
   payment: {
     Icon: DollarSignIcon,
     title: "Payment received",
-    classes: "bg-chart-3",
+    classes: "bg-accent-teal",
   },
   plan: {
     Icon: BadgeCheckIcon,
     title: "Plan upgraded",
-    classes: "bg-chart-4",
+    classes: "bg-accent-amber",
   },
   trial: {
     Icon: Clock4Icon,
     title: "Trial ending soon",
-    classes: "bg-chart-5",
+    classes: "bg-accent-rose",
   },
 };
 
