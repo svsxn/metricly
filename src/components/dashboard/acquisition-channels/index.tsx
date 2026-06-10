@@ -1,6 +1,6 @@
+import { Card, CardTitle } from "@/components/card";
 import { ArrowRightIcon } from "lucide-react";
-import Card from "../card";
-import ChartPie from "./charts/chart-pie";
+import ChartPie from "./chart-pie";
 
 const channels = [
   {
@@ -25,12 +25,8 @@ const channels = [
 
 export default function AcquisitionChannels() {
   return (
-    <Card
-      header={{
-        title: "Top Acquisition Channels",
-      }}
-      className="col-span-4 sm:col-span-2"
-    >
+    <Card className="col-span-4 sm:col-span-2">
+      <CardTitle>Top Acquisition Channels</CardTitle>
       <div className="flex flex-col gap-5 xl:flex-row xl:items-center">
         <ChartPie />
         <div className="xl:mx-auto w-full xl:max-w-xs space-y-2 text-sm">

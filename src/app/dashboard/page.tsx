@@ -2,9 +2,9 @@ import Stat from "@/components/dashboard/stat";
 import Header from "@/components/dashboard/header";
 import RecentActivity from "@/components/dashboard/recent-activity";
 import { STATS } from "@/data/stats";
-import OverTime from "@/components/dashboard/over-time";
-import AcquisitionChannels from "@/components/dashboard/acquisition-channels";
 import RecentCustomers from "@/components/dashboard/recent-customers";
+import OverTime from "@/components/dashboard/over-time-charts";
+import AcquisitionChannels from "@/components/dashboard/acquisition-channels";
 
 export default function Page() {
   return (

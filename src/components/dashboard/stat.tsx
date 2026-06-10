@@ -1,6 +1,6 @@
 import type { Stat } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
-import Card from "../card";
+import { Card, CardHeader, CardTitle } from "../card";
 
 type Props = Stat & {
   index: number;
@@ -16,18 +16,17 @@ const colorMap: Record<number, { bg: string; icon: string }> = {
 export default function Stat({ index, Icon, title, amount }: Props) {
   const styles = colorMap[index + 1];
   return (
-    <Card
-      header={{
-        title: title,
-        icon: {
+    <Card className="col-span-2 xl:col-span-1">
+      <CardHeader
+        icon={{
           Icon: Icon,
           color: styles.icon,
           background: styles.bg,
-        },
-      }}
-      className="col-span-2 xl:col-span-1"
-    >
-      <span className="text-3xl font-medium">{amount}</span>
+        }}
+      >
+        <CardTitle>{title}</CardTitle>
+      </CardHeader>
+      <p className="text-3xl font-medium">{amount}</p>
       <div className="flex text-xs gap-2 flex-wrap">
         <div className="flex gap-1 text-emerald-500">
           <ArrowUpIcon size={16} />

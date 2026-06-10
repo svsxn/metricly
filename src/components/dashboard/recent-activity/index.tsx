@@ -1,16 +1,12 @@
 import { ACTIVITIES } from "@/data/activities";
 import Activity from "./activity";
 import { ArrowRightIcon } from "lucide-react";
-import Card from "../card";
+import { Card, CardTitle } from "@/components/card";
 
 export default function RecentActivity() {
   return (
-    <Card
-      header={{
-        title: "Recent Activity",
-      }}
-      className="col-span-4 sm:col-span-2"
-    >
+    <Card className="col-span-4 sm:col-span-2">
+      <CardTitle>Recent Activity</CardTitle>
       <div className="flex flex-col">
         {ACTIVITIES.map((activity, index) => (
           <Activity
