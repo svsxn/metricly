@@ -15,8 +15,9 @@ const colorMap: Record<number, { bg: string; icon: string }> = {
 
 export default function Stat({ index, Icon, label, amount }: Props) {
   const styles = colorMap[index + 1];
+
   return (
-    <Card className="col-span-2 xl:col-span-1">
+    <Card className="col-span-2 xl:col-span-1 gap-1.5">
       <CardHeader
         icon={{
           Icon: Icon,
