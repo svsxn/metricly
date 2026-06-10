@@ -2,7 +2,7 @@ import { LucideIcon } from "lucide-react";
 
 type Stat = {
   Icon: LucideIcon;
-  title: string;
+  label: string;
   amount: string;
 };
 

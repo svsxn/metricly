@@ -41,11 +41,10 @@ function CardHeader({
   return (
     <div className="flex justify-between">
       {Icon ? (
-        <div className="flex items-center gap-3">
+        <div className="flex items-start gap-5">
           <div className={cn("p-1.5 rounded-md", icon.background)}>
-            <Icon color={icon.color} />
+            <Icon color={icon.color} size={28} />
           </div>
-          {/*<h2 className="text-sm md:text-base leading-tight">{children}</h2>*/}
           {children}
         </div>
       ) : (

@@ -13,7 +13,7 @@ const colorMap: Record<number, { bg: string; icon: string }> = {
   4: { bg: "bg-chart-5/20", icon: "var(--chart-5)" },
 };
 
-export default function Stat({ index, Icon, title, amount }: Props) {
+export default function Stat({ index, Icon, label, amount }: Props) {
   const styles = colorMap[index + 1];
   return (
     <Card className="col-span-2 xl:col-span-1">
@@ -24,9 +24,11 @@ export default function Stat({ index, Icon, title, amount }: Props) {
           background: styles.bg,
         }}
       >
-        <CardTitle>{title}</CardTitle>
+        <div className="">
+          <p className="text-sm text-muted-foreground leading-tight">{label}</p>
+          <p className="text-[28px] font-medium tabular-nums">{amount}</p>
+        </div>
       </CardHeader>
-      <p className="text-3xl font-medium">{amount}</p>
       <div className="flex text-xs gap-2 flex-wrap">
         <div className="flex gap-1 text-emerald-500">
           <ArrowUpIcon size={16} />

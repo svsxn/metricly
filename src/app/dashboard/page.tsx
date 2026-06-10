@@ -13,10 +13,10 @@ export default function Page() {
       <div className="grid grid-cols-4 gap-4 mt-6">
         {STATS.map((card, index) => (
           <Stat
-            key={card.title}
+            key={index}
             index={index}
             Icon={card.Icon}
-            title={card.title}
+            label={card.label}
             amount={card.amount}
           />
         ))}

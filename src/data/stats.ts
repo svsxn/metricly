@@ -9,22 +9,22 @@ import {
 export const STATS: Stat[] = [
   {
     Icon: CircleDollarSignIcon,
-    title: "Monthly Revenue",
+    label: "Monthly Revenue",
     amount: "$24,820",
   },
   {
     Icon: UsersIcon,
-    title: "Active Users",
+    label: "Active Users",
     amount: "8,492",
   },
   {
     Icon: TrendingUpIcon,
-    title: "Conversion Rate",
+    label: "Conversion Rate",
     amount: "6.84%",
   },
   {
     Icon: TrendingDownIcon,
-    title: "Churn Rate",
+    label: "Churn Rate",
     amount: "2.3%",
   },
 ];
