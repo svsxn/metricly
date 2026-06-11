@@ -1,7 +1,6 @@
 import { NAV_ITEMS, NAV_ITEMS_2 } from "@/data/nav-items";
 import NavItem from "./nav-item";
 import { Separator } from "../ui/separator";
-import { Icon } from "lucide-react";
 
 export default function Nav() {
   return (

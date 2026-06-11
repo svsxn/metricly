@@ -1,7 +1,6 @@
 import type { Stat } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
 import { Card, CardHeader } from "../card";
-import { Area, AreaChart } from "recharts";
 import StatSparkline from "../stat-sparkline";
 
 type Props = Stat & {
