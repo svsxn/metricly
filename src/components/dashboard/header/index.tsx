@@ -1,5 +1,6 @@
 import { BellIcon, DownloadIcon, RotateCwIcon, SearchIcon } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
+import DatePicker from "./date-picker";
 
 export default function Header() {
   return (
@@ -20,6 +21,7 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center gap-4">
+          <DatePicker />
           <Button variant="outline" className="px-3 py-4 rounded-sm">
             <RotateCwIcon /> Refresh
           </Button>
