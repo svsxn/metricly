@@ -20,11 +20,11 @@ export default function Header() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <Button className="px-3 py-4 rounded-md">
-            <RotateCwIcon />
+          <Button variant="outline" className="px-3 py-4 rounded-sm">
+            <RotateCwIcon /> Refresh
           </Button>
-          <Button className="px-3 py-4 rounded-md">
-            Export <DownloadIcon />
+          <Button className="px-3 py-4 rounded-sm">
+            <DownloadIcon /> Export
           </Button>
         </div>
       </div>
