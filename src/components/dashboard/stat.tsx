@@ -1,6 +1,8 @@
 import type { Stat } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
-import { Card, CardHeader, CardTitle } from "../card";
+import { Card, CardHeader } from "../card";
+import { Area, AreaChart } from "recharts";
+import StatSparkline from "../stat-sparkline";
 
 type Props = Stat & {
   index: number;
@@ -12,6 +14,17 @@ const colorMap: Record<number, { bg: string; icon: string }> = {
   3: { bg: "bg-chart-3/20", icon: "var(--chart-3)" },
   4: { bg: "bg-chart-5/20", icon: "var(--chart-5)" },
 };
+
+const revenueSparkline = [
+  { value: 12 },
+  { value: 14 },
+  { value: 13 },
+  { value: 17 },
+  { value: 15 },
+  { value: 21 },
+  { value: 19 },
+  { value: 24 },
+];
 
 export default function Stat({ index, Icon, label, amount }: Props) {
   const styles = colorMap[index + 1];
@@ -25,17 +38,20 @@ export default function Stat({ index, Icon, label, amount }: Props) {
           background: styles.bg,
         }}
       >
-        <div className="">
+        <div>
           <p className="text-sm text-muted-foreground leading-tight">{label}</p>
           <p className="text-[28px] font-medium tabular-nums">{amount}</p>
         </div>
       </CardHeader>
-      <div className="flex text-xs gap-2 flex-wrap">
-        <div className="flex gap-1 text-emerald-500">
-          <ArrowUpIcon size={16} />
-          <span>+18.4%</span>
+      <div className="flex items-end justify-between -mt-8">
+        <div className="flex text-xs gap-2 flex-wrap">
+          <div className="flex gap-1 text-emerald-500">
+            <ArrowUpIcon size={16} />
+            <span>+18.4%</span>
+          </div>
+          <span className="text-muted-foreground">vs Apr 1 - Apr 30</span>
         </div>
-        <span className="text-muted-foreground">vs Apr 1 - Apr 30</span>
+        <StatSparkline data={revenueSparkline} color={styles.icon} />
       </div>
     </Card>
   );
