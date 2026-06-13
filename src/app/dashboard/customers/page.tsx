@@ -10,7 +10,7 @@ export default function Page() {
         description="Manage customer accounts, subscriptions, and lifecycle status."
       />
       <div className="grid grid-cols-4 gap-4 mt-6">
-        <Stats data={STATS.dashboard} />
+        <Stats data={STATS.customers} />
         {/*{STATS.map((card, index) => (
           <Stat
             key={index}
