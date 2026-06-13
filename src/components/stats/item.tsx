@@ -25,7 +25,7 @@ const revenueSparkline = [
   { value: 24 },
 ];
 
-export default function Stat({ index, Icon, label, amount }: Props) {
+export default function Item({ index, Icon, label, amount }: Props) {
   const styles = colorMap[index + 1];
 
   return (

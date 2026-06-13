@@ -1,4 +1,4 @@
-import Stat from "@/components/dashboard/stat";
+import Stats from "@/components/stats";
 import Header from "@/components/header";
 import RecentActivity from "@/components/dashboard/recent-activity";
 import { STATS } from "@/data/stats";
@@ -15,15 +15,7 @@ export default function Page() {
       business."
       />
       <div className="grid grid-cols-4 gap-4 mt-6">
-        {STATS.map((card, index) => (
-          <Stat
-            key={index}
-            index={index}
-            Icon={card.Icon}
-            label={card.label}
-            amount={card.amount}
-          />
-        ))}
+        <Stats data={STATS.dashboard} />
         <OverTime
           title="Revenue Over Time"
           color="var(--chart-1)"

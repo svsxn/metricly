@@ -1,4 +1,6 @@
 import Header from "@/components/header";
+import Stats from "@/components/stats";
+import { STATS } from "@/data/stats";
 
 export default function Page() {
   return (
@@ -8,6 +10,7 @@ export default function Page() {
         description="Manage customer accounts, subscriptions, and lifecycle status."
       />
       <div className="grid grid-cols-4 gap-4 mt-6">
+        <Stats data={STATS.dashboard} />
         {/*{STATS.map((card, index) => (
           <Stat
             key={index}
