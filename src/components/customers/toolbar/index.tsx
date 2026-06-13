@@ -13,7 +13,7 @@ export default function Toolbar() {
   return (
     <Card className="flex-row justify-between col-span-4">
       <div className="flex gap-3">
-        <InputGroup className="rounded-sm border-border bg-card!">
+        <InputGroup className="w-68 rounded-sm border-border bg-card!">
           <InputGroupInput
             placeholder="Search customers..."
             className="placeholder:text-muted-foreground/50"
