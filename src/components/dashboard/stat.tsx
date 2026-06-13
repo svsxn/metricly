@@ -1,7 +1,7 @@
 import type { Stat } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
 import { Card, CardHeader } from "../card";
-import StatSparkline from "../stat-sparkline";
+import StatSparkline from "./stat-sparkline";
 
 type Props = Stat & {
   index: number;

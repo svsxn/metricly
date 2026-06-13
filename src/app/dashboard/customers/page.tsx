@@ -1,21 +1,14 @@
-import Stat from "@/components/dashboard/stat";
 import Header from "@/components/header";
-import RecentActivity from "@/components/dashboard/recent-activity";
-import { STATS } from "@/data/stats";
-import RecentCustomers from "@/components/dashboard/recent-customers";
-import OverTime from "@/components/dashboard/over-time-charts";
-import AcquisitionChannels from "@/components/dashboard/acquisition-channels";
 
 export default function Page() {
   return (
     <div className="p-6">
       <Header
-        title="Overview"
-        description="Welcome back, Sebastian. Here's what's happening with your
-      business."
+        title="Customers"
+        description="Manage customer accounts, subscriptions, and lifecycle status."
       />
       <div className="grid grid-cols-4 gap-4 mt-6">
-        {STATS.map((card, index) => (
+        {/*{STATS.map((card, index) => (
           <Stat
             key={index}
             index={index}
@@ -36,7 +29,7 @@ export default function Page() {
         />
         <RecentActivity />
         <AcquisitionChannels />
-        <RecentCustomers />
+        <RecentCustomers />*/}
       </div>
     </div>
   );

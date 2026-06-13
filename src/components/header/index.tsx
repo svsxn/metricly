@@ -1,16 +1,18 @@
 import { BellIcon, DownloadIcon, RotateCwIcon, SearchIcon } from "lucide-react";
-import { Button } from "../../ui/button";
+import { Button } from "../ui/button";
 import DatePicker from "./date-picker";
 
-export default function Header() {
+type Props = {
+  title: string;
+  description: string;
+};
+
+export default function Header({ title, description }: Props) {
   return (
     <div className="flex justify-between">
       <div className="flex flex-col justify-end">
-        <h1 className="text-4xl font-semibold">Overview</h1>
-        <p className="text-sm text-muted-foreground">
-          Welcome back, Sebastian. Here&apos;s what&apos;s happening with your
-          business.
-        </p>
+        <h1 className="text-4xl font-semibold">{title}</h1>
+        <p className="text-sm text-muted-foreground">{description}</p>
       </div>
       <div className="flex flex-col items-end gap-6">
         <div className="flex gap-6 items-center">
