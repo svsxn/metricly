@@ -1,4 +1,5 @@
 import Toolbar from "@/components/customers/toolbar";
+import RecentCustomers from "@/components/dashboard/recent-customers";
 import Header from "@/components/header";
 import Stats from "@/components/stats";
 import { STATS } from "@/data/stats";
@@ -13,6 +14,7 @@ export default function Page() {
       <div className="grid grid-cols-4 gap-4 mt-6">
         <Stats data={STATS.customers} />
         <Toolbar />
+        <RecentCustomers />
       </div>
     </div>
   );
