@@ -26,3 +26,8 @@ type Customer = {
   mrr: number;
   joined: string;
 };
+
+type SelectOption = {
+  label: string;
+  value: string;
+};
