@@ -16,7 +16,7 @@ function Card<TElement extends ElementType = "div">({
   return (
     <Component
       className={cn(
-        "flex flex-col gap-3 bg-card border border-border/100 rounded-sm p-4 sm:px-6 sm:py-5",
+        "flex flex-col gap-3 bg-card border rounded-sm p-4 sm:px-6 sm:py-5",
         className,
       )}
     >
