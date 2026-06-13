@@ -1,4 +1,4 @@
-import { SearchIcon } from "lucide-react";
+import { DownloadIcon, SearchIcon } from "lucide-react";
 import { Card } from "../../card";
 import {
   InputGroup,
@@ -7,6 +7,7 @@ import {
 } from "../../ui/input-group";
 import FilterSelect from "./filter-select";
 import { SELECT_OPTIONS } from "@/data/select-options";
+import { Button } from "@/components/ui/button";
 
 export default function Toolbar() {
   return (
@@ -42,7 +43,10 @@ export default function Toolbar() {
           className="w-43"
         />
       </div>
-      <div>Export</div>
+      <Button variant="outline" className="rounded-sm bg-card! gap-3 px-3">
+        <DownloadIcon />
+        Export
+      </Button>
     </Card>
   );
 }
