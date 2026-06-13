@@ -34,6 +34,13 @@ export default function Toolbar() {
           options={SELECT_OPTIONS.status}
           className="w-54"
         />
+        <FilterSelect
+          label="Sort"
+          placeholder="Newest"
+          defaultValue="newest"
+          options={SELECT_OPTIONS.sort}
+          className="w-43"
+        />
       </div>
       <div>Export</div>
     </Card>

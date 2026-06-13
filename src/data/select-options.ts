@@ -15,4 +15,8 @@ export const SELECT_OPTIONS = {
     { label: "Past due", value: "past" },
     { label: "Canceled", value: "canceled" },
   ],
+  sort: [
+    { label: "Newest", value: "newest" },
+    { label: "Oldest", value: "oldest" },
+  ],
 } satisfies Record<string, SelectOption[]>;
