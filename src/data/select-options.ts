@@ -7,4 +7,12 @@ export const SELECT_OPTIONS = {
     { label: "Pro", value: "pro" },
     { label: "Business", value: "business" },
   ],
+  status: [
+    { label: "All statuses", value: "all" },
+    { label: "Active", value: "active" },
+    { label: "Trial", value: "trial" },
+    { label: "Past due", value: "past_due" },
+    { label: "Past due", value: "past" },
+    { label: "Canceled", value: "canceled" },
+  ],
 } satisfies Record<string, SelectOption[]>;

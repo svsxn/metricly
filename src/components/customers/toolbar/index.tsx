@@ -27,6 +27,13 @@ export default function Toolbar() {
           defaultValue="all"
           options={SELECT_OPTIONS.plan}
         />
+        <FilterSelect
+          label="Status"
+          placeholder="All statuses"
+          defaultValue="all"
+          options={SELECT_OPTIONS.status}
+          className="w-54"
+        />
       </div>
       <div>Export</div>
     </Card>
