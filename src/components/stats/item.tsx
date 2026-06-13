@@ -1,7 +1,7 @@
 import type { Stat } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
 import { Card, CardHeader } from "../card";
-import StatSparkline from "./stat-sparkline";
+import Sparkline from "./sparkline";
 
 type Props = Stat & {
   index: number;
@@ -42,7 +42,7 @@ export default function Item({ index, Icon, label, amount }: Props) {
           <p className="text-[28px] font-medium tabular-nums">{amount}</p>
         </div>
       </CardHeader>
-      <div className="flex items-end justify-between -mt-8">
+      <div className="flex items-end justify-between -mt-6">
         <div className="flex text-xs gap-2 flex-wrap">
           <div className="flex gap-1 text-emerald-500">
             <ArrowUpIcon size={16} />
@@ -50,7 +50,7 @@ export default function Item({ index, Icon, label, amount }: Props) {
           </div>
           <span className="text-muted-foreground">vs Apr 1 - Apr 30</span>
         </div>
-        <StatSparkline data={revenueSparkline} color={styles.icon} />
+        <Sparkline data={revenueSparkline} color={styles.icon} />
       </div>
     </Card>
   );
