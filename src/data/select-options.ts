@@ -12,7 +12,6 @@ export const SELECT_OPTIONS = {
     { label: "Active", value: "active" },
     { label: "Trial", value: "trial" },
     { label: "Past due", value: "past_due" },
-    { label: "Past due", value: "past" },
     { label: "Canceled", value: "canceled" },
   ],
   sort: [

@@ -36,12 +36,21 @@ export default function FilterSelect({
           <SelectValue placeholder={placeholder} />
         </div>
       </SelectTrigger>
-      <SelectContent>
-        {options.map((option) => (
-          <SelectItem key={option.value} value={option.value}>
-            {option.label}
-          </SelectItem>
-        ))}
+      <SelectContent
+        position="popper"
+        className="w-(--radix-select-trigger-width) rounded-sm shadow-xl"
+      >
+        <div className="p-1.5">
+          {options.map((option) => (
+            <SelectItem
+              key={option.value}
+              value={option.value}
+              className="rounded-sm px-3 py-2"
+            >
+              {option.label}
+            </SelectItem>
+          ))}
+        </div>
       </SelectContent>
     </Select>
   );
