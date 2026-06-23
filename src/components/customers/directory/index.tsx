@@ -1,4 +1,10 @@
-import { Card, CardAction, CardHeader, CardTitle } from "@/components/card";
+import {
+  Card,
+  CardAction,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/card";
 import CustomersTable from "./customers-table";
 import { Button } from "@/components/ui/button";
 import { ArrowRightIcon, ColumnsIcon } from "lucide-react";
@@ -24,6 +30,14 @@ export default function Directory() {
         </CardAction>
       </CardHeader>
       <CustomersTable />
+      <CardFooter>
+        <p className="text-muted-foreground text-[13px]">
+          Showing 1 to 6 of 2,486 customers
+        </p>
+        <div className="border border-primary/60 bg-primary/30 px-3 py-0.5 rounded-sm text-sm">
+          1
+        </div>
+      </CardFooter>
     </Card>
   );
 }
