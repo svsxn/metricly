@@ -69,7 +69,7 @@ function CardAction({
 }
 
 function CardFooter({ children }: { children: ReactNode }) {
-  return <div>{children}</div>;
+  return <div className="flex justify-between">{children}</div>;
 }
 
 export { Card, CardHeader, CardTitle, CardAction, CardFooter };
