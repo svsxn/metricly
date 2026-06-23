@@ -8,7 +8,7 @@ export default function Directory() {
     <Card className="col-span-4">
       <CardHeader>
         <CardTitle>Customer Directory</CardTitle>
-        <CardAction className="flex items-center gap-4">
+        <CardAction className="flex items-center gap-6">
           <Button variant="outline" size="sm" className="rounded-sm">
             <ColumnsIcon />
             Columns
