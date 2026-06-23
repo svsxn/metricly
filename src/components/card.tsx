@@ -58,8 +58,14 @@ function CardTitle({ children }: { children: ReactNode }) {
   return <h2>{children}</h2>;
 }
 
-function CardAction({ children }: { children: ReactNode }) {
-  return <div className="shrink-0">{children}</div>;
+function CardAction({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <div className={cn("shrink-0", className)}>{children}</div>;
 }
 
 export { Card, CardHeader, CardTitle, CardAction };
