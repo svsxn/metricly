@@ -68,4 +68,8 @@ function CardAction({
   return <div className={cn("shrink-0", className)}>{children}</div>;
 }
 
-export { Card, CardHeader, CardTitle, CardAction };
+function CardFooter({ children }: { children: ReactNode }) {
+  return <div>{children}</div>;
+}
+
+export { Card, CardHeader, CardTitle, CardAction, CardFooter };
