@@ -1,4 +1,4 @@
-import { Card, CardTitle } from "@/components/card";
+import { Card, CardFooter, CardTitle } from "@/components/card";
 import { ArrowRightIcon } from "lucide-react";
 import ChartPie from "./chart-pie";
 
@@ -51,14 +51,14 @@ export default function AcquisitionChannels() {
           ))}
         </div>
       </div>
-      <div className="group flex gap-2 hover:cursor-pointer">
+      <CardFooter className="group gap-2 hover:cursor">
         <span className="text-primary text-xs">View full report</span>
         <ArrowRightIcon
           color="var(--primary)"
           size={16}
           className="group-hover:translate-x-1 transition-transform"
         />
-      </div>
+      </CardFooter>
     </Card>
   );
 }

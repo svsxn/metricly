@@ -30,7 +30,7 @@ export default function Directory() {
         </CardAction>
       </CardHeader>
       <CustomersTable />
-      <CardFooter>
+      <CardFooter className="justify-between">
         <p className="text-muted-foreground text-[13px]">
           Showing 1 to 6 of 2,486 customers
         </p>

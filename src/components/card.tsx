@@ -68,8 +68,14 @@ function CardAction({
   return <div className={cn("shrink-0", className)}>{children}</div>;
 }
 
-function CardFooter({ children }: { children: ReactNode }) {
-  return <div className="flex justify-between">{children}</div>;
+function CardFooter({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <div className={cn("flex items-center", className)}>{children}</div>;
 }
 
 export { Card, CardHeader, CardTitle, CardAction, CardFooter };
