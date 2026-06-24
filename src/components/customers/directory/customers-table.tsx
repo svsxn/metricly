@@ -82,6 +82,15 @@ const columns: Column[] = [
     render: (customer) => `$${customer.mrr}.00`,
   },
   {
+    header: "Usage",
+    render: () => (
+      <div className="flex items-center gap-2">
+        <div className="w-24 h-2 rounded-full bg-muted"></div>
+        <p className="text-[13px] text-muted-foreground">0%</p>
+      </div>
+    ),
+  },
+  {
     header: "Joined",
     headClassName: "hidden md:table-cell",
     cellClassName: "hidden md:table-cell text-muted-foreground",
