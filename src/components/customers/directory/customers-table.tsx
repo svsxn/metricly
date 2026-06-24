@@ -97,6 +97,15 @@ const columns: Column[] = [
     render: (customer) => customer.joined,
   },
   {
+    header: "Last active",
+    render: () => (
+      <div className="flex items-center gap-2">
+        <div className="size-2 rounded-full bg-emerald-500"></div>
+        <p className="text-[13px] text-muted-foreground">2h ago</p>
+      </div>
+    ),
+  },
+  {
     header: "Actions",
     headClassName: "hidden sm:table-cell text-right",
     cellClassName: "hidden sm:table-cell text-right",
