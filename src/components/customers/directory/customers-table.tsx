@@ -47,13 +47,17 @@ const columns: Column[] = [
   {
     header: "Customer",
     cellClassName: "font-medium",
-    render: (customer) => customer.name,
-  },
-  {
-    header: "Email",
-    headClassName: "hidden md:table-cell",
-    cellClassName: "hidden md:table-cell text-muted-foreground",
-    render: (customer) => customer.email,
+    render: (customer) => (
+      <div className="flex items-center gap-2 leading-tight">
+        <div className="flex items-center justify-center text-xs size-7 bg-primary rounded-full">
+          XY
+        </div>
+        <div>
+          <p>{customer.name}</p>
+          <p className="text-muted-foreground">{customer.email}</p>
+        </div>
+      </div>
+    ),
   },
   {
     header: "Plan",
