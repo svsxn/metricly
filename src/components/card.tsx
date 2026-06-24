@@ -68,6 +68,16 @@ function CardAction({
   return <div className={cn("shrink-0", className)}>{children}</div>;
 }
 
+function CardContent({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return <div className={cn("", className)}>{children}</div>;
+}
+
 function CardFooter({
   children,
   className,
@@ -78,4 +88,4 @@ function CardFooter({
   return <div className={cn("flex items-center", className)}>{children}</div>;
 }
 
-export { Card, CardHeader, CardTitle, CardAction, CardFooter };
+export { Card, CardHeader, CardTitle, CardAction, CardContent, CardFooter };

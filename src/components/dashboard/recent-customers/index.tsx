@@ -1,4 +1,10 @@
-import { Card, CardAction, CardHeader, CardTitle } from "@/components/card";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/card";
 import CustomersTable from "./customers-table";
 import { Button } from "@/components/ui/button";
 
@@ -13,7 +19,9 @@ export default function RecentCustomers() {
           </Button>
         </CardAction>
       </CardHeader>
-      <CustomersTable />
+      <CardContent>
+        <CustomersTable />
+      </CardContent>
     </Card>
   );
 }

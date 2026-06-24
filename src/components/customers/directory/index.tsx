@@ -1,6 +1,7 @@
 import {
   Card,
   CardAction,
+  CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -29,7 +30,9 @@ export default function Directory() {
           </button>
         </CardAction>
       </CardHeader>
-      <CustomersTable />
+      <CardContent>
+        <CustomersTable />
+      </CardContent>
       <CardFooter className="justify-between">
         <p className="text-muted-foreground text-[13px]">
           Showing 1 to 6 of 2,486 customers

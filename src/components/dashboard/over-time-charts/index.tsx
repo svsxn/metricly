@@ -1,4 +1,10 @@
-import { Card, CardAction, CardHeader, CardTitle } from "@/components/card";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/card";
 import PeriodSelect from "./period-select";
 import ChartArea from "./chart-area";
 
@@ -17,7 +23,9 @@ export default function OverTime({ title, color, seriesLabel }: Props) {
           <PeriodSelect />
         </CardAction>
       </CardHeader>
-      <ChartArea color={color} seriesLabel={seriesLabel} />
+      <CardContent>
+        <ChartArea color={color} seriesLabel={seriesLabel} />
+      </CardContent>
     </Card>
   );
 }

@@ -1,4 +1,4 @@
-import { Card, CardFooter, CardTitle } from "@/components/card";
+import { Card, CardContent, CardFooter, CardTitle } from "@/components/card";
 import { ArrowRightIcon } from "lucide-react";
 import ChartPie from "./chart-pie";
 
@@ -27,7 +27,7 @@ export default function AcquisitionChannels() {
   return (
     <Card className="col-span-4 sm:col-span-2">
       <CardTitle>Top Acquisition Channels</CardTitle>
-      <div className="flex flex-col gap-5 xl:flex-row xl:items-center">
+      <CardContent className="flex flex-col gap-5 xl:flex-row xl:items-center">
         <ChartPie />
         <div className="xl:mx-auto w-full xl:max-w-xs space-y-2 text-sm">
           {channels.map((channel) => (
@@ -50,7 +50,7 @@ export default function AcquisitionChannels() {
             </div>
           ))}
         </div>
-      </div>
+      </CardContent>
       <CardFooter className="group gap-2 hover:cursor">
         <span className="text-primary text-xs">View full report</span>
         <ArrowRightIcon
