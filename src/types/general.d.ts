@@ -30,4 +30,5 @@ type Customer = {
 type SelectOption = {
   label: string;
   value: string;
+  icon: LucideIcon;
 };

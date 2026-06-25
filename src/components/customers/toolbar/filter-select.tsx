@@ -41,15 +41,20 @@ export default function FilterSelect({
         className="w-(--radix-select-trigger-width) rounded-sm shadow-xl"
       >
         <div className="p-1.5">
-          {options.map((option) => (
-            <SelectItem
-              key={option.value}
-              value={option.value}
-              className="rounded-sm px-3 py-2"
-            >
-              {option.label}
-            </SelectItem>
-          ))}
+          {options.map((option) => {
+            const Icon = option.icon;
+
+            return (
+              <SelectItem
+                key={option.value}
+                value={option.value}
+                className="rounded-sm px-3 py-2"
+              >
+                <Icon className="size-4 text-muted-foreground" />
+                <span>{option.label}</span>
+              </SelectItem>
+            );
+          })}
         </div>
       </SelectContent>
     </Select>
