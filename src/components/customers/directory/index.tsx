@@ -8,7 +8,12 @@ import {
 } from "@/components/card";
 import CustomersTable from "./customers-table";
 import { Button } from "@/components/ui/button";
-import { ArrowRightIcon, ColumnsIcon } from "lucide-react";
+import {
+  ArrowRightIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ColumnsIcon,
+} from "lucide-react";
 
 export default function Directory() {
   return (
@@ -38,11 +43,27 @@ export default function Directory() {
           Showing 1 to 6 of 2,486 customers
         </p>
         <div className="flex gap-2">
-          <div className="border border-primary/60 bg-primary/30 px-3 py-0.5 rounded-sm text-sm">
+          <div className="flex items-center justify-center h-7 w-9 border rounded-sm">
+            <ChevronLeftIcon className="size-4 text-muted-foreground/60" />
+          </div>
+          <div className="flex items-center justify-center h-7 w-9 border border-primary/60 bg-primary/30 rounded-sm text-sm">
             1
           </div>
-          <div className="border px-3 py-0.5 rounded-sm text-sm">2</div>
-          <div className="border px-3 py-0.5 rounded-sm text-sm">3</div>
+          <div className="flex items-center justify-center h-7 w-9 border rounded-sm text-sm">
+            2
+          </div>
+          <div className="flex items-center justify-center h-7 w-9 border rounded-sm text-sm">
+            3
+          </div>
+          <div className="flex items-center justify-center h-7 w-9 border rounded-sm text-muted-foreground/60">
+            ...
+          </div>
+          <div className="flex items-center justify-center h-7 w-9 border rounded-sm text-sm">
+            415
+          </div>
+          <div className="flex items-center justify-center h-7 w-9 border rounded-sm">
+            <ChevronRightIcon className="size-4" />
+          </div>
         </div>
       </CardFooter>
     </Card>
