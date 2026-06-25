@@ -37,8 +37,12 @@ export default function Directory() {
         <p className="text-muted-foreground text-[13px]">
           Showing 1 to 6 of 2,486 customers
         </p>
-        <div className="border border-primary/60 bg-primary/30 px-3 py-0.5 rounded-sm text-sm">
-          1
+        <div className="flex gap-2">
+          <div className="border border-primary/60 bg-primary/30 px-3 py-0.5 rounded-sm text-sm">
+            1
+          </div>
+          <div className="border px-3 py-0.5 rounded-sm text-sm">2</div>
+          <div className="border px-3 py-0.5 rounded-sm text-sm">3</div>
         </div>
       </CardFooter>
     </Card>
