@@ -27,7 +27,7 @@ export default function FilterSelect({
     <Select defaultValue={defaultValue}>
       <SelectTrigger
         className={cn(
-          "w-45 shrink-0 border-border bg-card! rounded-sm",
+          "w-45 shrink-0 border-border bg-card! rounded-sm [&_span>svg]:hidden",
           className,
         )}
       >
