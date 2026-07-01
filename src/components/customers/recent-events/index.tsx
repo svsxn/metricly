@@ -1,11 +1,18 @@
-import { Card, CardFooter, CardTitle } from "@/components/card";
+import { Card, CardContent, CardFooter, CardTitle } from "@/components/card";
 import { ArrowRightIcon } from "lucide-react";
+import Event from "./event";
 
 export default function RecentEvents() {
   return (
     <Card className="col-span-4">
       <CardTitle>Recent Customer Events</CardTitle>
-      <CardFooter className="group gap-2 hover:cursor-pointer">
+      <CardContent className="flex flex-col gap-1">
+        <Event />
+        <Event />
+        <Event />
+        <Event />
+      </CardContent>
+      <CardFooter className="group gap-2 hover:cursor-pointer w-fit">
         <span className="text-primary text-xs">View all events</span>
         <ArrowRightIcon
           color="var(--primary)"
