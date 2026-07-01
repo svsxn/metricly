@@ -32,3 +32,9 @@ type SelectOption = {
   value: string;
   icon: LucideIcon;
 };
+
+type Channel = {
+  name: string;
+  amount: number;
+  color: string;
+};
