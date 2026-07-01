@@ -51,7 +51,7 @@ export default function AcquisitionChannels() {
           ))}
         </div>
       </CardContent>
-      <CardFooter className="group gap-2 hover:cursor">
+      <CardFooter className="group gap-2 hover:cursor-pointer">
         <span className="text-primary text-xs">View full report</span>
         <ArrowRightIcon
           color="var(--primary)"
