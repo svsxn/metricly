@@ -17,7 +17,7 @@ import {
 
 export default function Directory() {
   return (
-    <Card className="col-span-4">
+    <Card className="col-span-12">
       <CardHeader>
         <CardTitle>Customer Directory</CardTitle>
         <CardAction className="flex items-center gap-6">

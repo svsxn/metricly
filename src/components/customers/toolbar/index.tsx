@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Toolbar() {
   return (
-    <Card className="flex-row justify-between col-span-4">
+    <Card className="flex-row justify-between col-span-12">
       <div className="flex gap-3">
         <InputGroup className="w-68 rounded-sm border-border bg-card!">
           <InputGroupInput

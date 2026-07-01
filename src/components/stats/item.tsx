@@ -2,9 +2,11 @@ import type { Stat } from "@/types/general";
 import { ArrowUpIcon } from "lucide-react";
 import { Card, CardContent, CardHeader } from "../card";
 import Sparkline from "./sparkline";
+import { cn } from "@/lib/utils";
 
 type Props = Stat & {
   index: number;
+  className?: string;
 };
 
 const colorMap: Record<number, { bg: string; icon: string }> = {
@@ -25,11 +27,11 @@ const revenueSparkline = [
   { value: 24 },
 ];
 
-export default function Item({ index, Icon, label, amount }: Props) {
+export default function Item({ index, Icon, label, amount, className }: Props) {
   const styles = colorMap[index + 1];
 
   return (
-    <Card className="col-span-2 xl:col-span-1 gap-1.5">
+    <Card className={cn("col-span-2 xl:col-span-1 gap-1.5", className)}>
       <CardHeader
         icon={{
           Icon: Icon,

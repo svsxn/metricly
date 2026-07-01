@@ -3,9 +3,10 @@ import Item from "./item";
 
 type Props = {
   data: Stat[];
+  itemClassName?: string;
 };
 
-export default function Stats({ data }: Props) {
+export default function Stats({ data, itemClassName }: Props) {
   return (
     <>
       {data.map((card, index) => (
@@ -15,6 +16,7 @@ export default function Stats({ data }: Props) {
           Icon={card.Icon}
           label={card.label}
           amount={card.amount}
+          className={itemClassName}
         />
       ))}
     </>
