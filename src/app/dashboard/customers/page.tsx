@@ -1,4 +1,5 @@
 import Directory from "@/components/customers/directory";
+import PlanDistribution from "@/components/customers/plan-distribution";
 import RecentEvents from "@/components/customers/recent-events";
 import Toolbar from "@/components/customers/toolbar";
 import Header from "@/components/header";
@@ -19,6 +20,7 @@ export default function Page() {
         />
         <Toolbar />
         <Directory />
+        <PlanDistribution />
         <RecentEvents />
       </div>
     </div>
