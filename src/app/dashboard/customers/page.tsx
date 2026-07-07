@@ -1,4 +1,5 @@
 import Directory from "@/components/customers/directory";
+import LifecycleStatus from "@/components/customers/lifecycle-status";
 import PlanDistribution from "@/components/customers/plan-distribution";
 import RecentEvents from "@/components/customers/recent-events";
 import Toolbar from "@/components/customers/toolbar";
@@ -21,6 +22,7 @@ export default function Page() {
         <Toolbar />
         <Directory />
         <PlanDistribution />
+        <LifecycleStatus />
         <RecentEvents />
       </div>
     </div>
